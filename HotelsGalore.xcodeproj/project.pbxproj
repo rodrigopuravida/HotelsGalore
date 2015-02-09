@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4847AA451A896EFB000F736D /* HotelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4847AA441A896EFB000F736D /* HotelListViewController.m */; };
 		4847AA471A89776A000F736D /* Tasks in Resources */ = {isa = PBXBuildFile; fileRef = 4847AA461A89776A000F736D /* Tasks */; };
+		4847AA4A1A897826000F736D /* RoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4847AA491A897826000F736D /* RoomsViewController.m */; };
 		487785B81A89548B00AFDCB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785B71A89548B00AFDCB9 /* main.m */; };
 		487785BB1A89548B00AFDCB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785BA1A89548B00AFDCB9 /* AppDelegate.m */; };
 		487785BE1A89548B00AFDCB9 /* HotelsGalore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 487785BC1A89548B00AFDCB9 /* HotelsGalore.xcdatamodeld */; };
@@ -38,6 +39,8 @@
 		4847AA431A896EFB000F736D /* HotelListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotelListViewController.h; path = ../HotelListViewController.h; sourceTree = "<group>"; };
 		4847AA441A896EFB000F736D /* HotelListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelListViewController.m; path = ../HotelListViewController.m; sourceTree = "<group>"; };
 		4847AA461A89776A000F736D /* Tasks */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Tasks; sourceTree = "<group>"; };
+		4847AA481A897826000F736D /* RoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsViewController.h; sourceTree = "<group>"; };
+		4847AA491A897826000F736D /* RoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsViewController.m; sourceTree = "<group>"; };
 		487785B21A89548A00AFDCB9 /* HotelsGalore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelsGalore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487785B61A89548A00AFDCB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		487785B71A89548B00AFDCB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 				4847AA431A896EFB000F736D /* HotelListViewController.h */,
 				4847AA441A896EFB000F736D /* HotelListViewController.m */,
 				4847AA461A89776A000F736D /* Tasks */,
+				4847AA481A897826000F736D /* RoomsViewController.h */,
+				4847AA491A897826000F736D /* RoomsViewController.m */,
 				487785C01A89548B00AFDCB9 /* ViewController.m */,
 				487785EA1A8965EB00AFDCB9 /* seed.json */,
 				487785C21A89548B00AFDCB9 /* Main.storyboard */,
@@ -262,6 +267,7 @@
 				487785BE1A89548B00AFDCB9 /* HotelsGalore.xcdatamodeld in Sources */,
 				487785C11A89548B00AFDCB9 /* ViewController.m in Sources */,
 				487785E91A895A1C00AFDCB9 /* Hotel.m in Sources */,
+				4847AA4A1A897826000F736D /* RoomsViewController.m in Sources */,
 				487785B81A89548B00AFDCB9 /* main.m in Sources */,
 				4847AA451A896EFB000F736D /* HotelListViewController.m in Sources */,
 			);
