@@ -9,7 +9,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="Reservatoin" syncable="YES">
+    <entity name="Reservation" syncable="YES">
         <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
@@ -21,7 +21,7 @@
     <elements>
         <element name="Hotel" positionX="-63" positionY="-18" width="128" height="90"/>
         <element name="Room" positionX="-54" positionY="18" width="128" height="90"/>
-        <element name="Reservatoin" positionX="-36" positionY="45" width="128" height="75"/>
+        <element name="Reservation" positionX="-36" positionY="45" width="128" height="73"/>
         <element name="Guest" positionX="-18" positionY="54" width="128" height="75"/>
     </elements>
 </model>
