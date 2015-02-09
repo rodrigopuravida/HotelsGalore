@@ -15,6 +15,10 @@
 		487785C61A89548B00AFDCB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487785C51A89548B00AFDCB9 /* Images.xcassets */; };
 		487785C91A89548B00AFDCB9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 487785C71A89548B00AFDCB9 /* LaunchScreen.xib */; };
 		487785D51A89548B00AFDCB9 /* HotelsGaloreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785D41A89548B00AFDCB9 /* HotelsGaloreTests.m */; };
+		487785E01A895A1C00AFDCB9 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785DF1A895A1C00AFDCB9 /* Room.m */; };
+		487785E31A895A1C00AFDCB9 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785E21A895A1C00AFDCB9 /* Reservation.m */; };
+		487785E61A895A1C00AFDCB9 /* Guest.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785E51A895A1C00AFDCB9 /* Guest.m */; };
+		487785E91A895A1C00AFDCB9 /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785E81A895A1C00AFDCB9 /* Hotel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,14 @@
 		487785CE1A89548B00AFDCB9 /* HotelsGaloreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotelsGaloreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		487785D31A89548B00AFDCB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		487785D41A89548B00AFDCB9 /* HotelsGaloreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotelsGaloreTests.m; sourceTree = "<group>"; };
+		487785DE1A895A1C00AFDCB9 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		487785DF1A895A1C00AFDCB9 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		487785E11A895A1C00AFDCB9 /* Reservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reservation.h; sourceTree = "<group>"; };
+		487785E21A895A1C00AFDCB9 /* Reservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reservation.m; sourceTree = "<group>"; };
+		487785E41A895A1C00AFDCB9 /* Guest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guest.h; sourceTree = "<group>"; };
+		487785E51A895A1C00AFDCB9 /* Guest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guest.m; sourceTree = "<group>"; };
+		487785E71A895A1C00AFDCB9 /* Hotel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hotel.h; sourceTree = "<group>"; };
+		487785E81A895A1C00AFDCB9 /* Hotel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hotel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +103,14 @@
 				487785C51A89548B00AFDCB9 /* Images.xcassets */,
 				487785C71A89548B00AFDCB9 /* LaunchScreen.xib */,
 				487785BC1A89548B00AFDCB9 /* HotelsGalore.xcdatamodeld */,
+				487785E71A895A1C00AFDCB9 /* Hotel.h */,
+				487785E81A895A1C00AFDCB9 /* Hotel.m */,
+				487785E41A895A1C00AFDCB9 /* Guest.h */,
+				487785E51A895A1C00AFDCB9 /* Guest.m */,
+				487785E11A895A1C00AFDCB9 /* Reservation.h */,
+				487785E21A895A1C00AFDCB9 /* Reservation.m */,
+				487785DE1A895A1C00AFDCB9 /* Room.h */,
+				487785DF1A895A1C00AFDCB9 /* Room.m */,
 				487785B51A89548A00AFDCB9 /* Supporting Files */,
 			);
 			path = HotelsGalore;
@@ -222,9 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				487785E31A895A1C00AFDCB9 /* Reservation.m in Sources */,
+				487785E01A895A1C00AFDCB9 /* Room.m in Sources */,
+				487785E61A895A1C00AFDCB9 /* Guest.m in Sources */,
 				487785BB1A89548B00AFDCB9 /* AppDelegate.m in Sources */,
 				487785BE1A89548B00AFDCB9 /* HotelsGalore.xcdatamodeld in Sources */,
 				487785C11A89548B00AFDCB9 /* ViewController.m in Sources */,
+				487785E91A895A1C00AFDCB9 /* Hotel.m in Sources */,
 				487785B81A89548B00AFDCB9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
