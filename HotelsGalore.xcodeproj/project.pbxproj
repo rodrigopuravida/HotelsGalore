@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4847AA421A8969C7000F736D /* HotelListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4847AA411A8969C7000F736D /* HotelListViewController.m */; };
 		487785B81A89548B00AFDCB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785B71A89548B00AFDCB9 /* main.m */; };
 		487785BB1A89548B00AFDCB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785BA1A89548B00AFDCB9 /* AppDelegate.m */; };
 		487785BE1A89548B00AFDCB9 /* HotelsGalore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 487785BC1A89548B00AFDCB9 /* HotelsGalore.xcdatamodeld */; };
@@ -19,6 +20,7 @@
 		487785E31A895A1C00AFDCB9 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785E21A895A1C00AFDCB9 /* Reservation.m */; };
 		487785E61A895A1C00AFDCB9 /* Guest.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785E51A895A1C00AFDCB9 /* Guest.m */; };
 		487785E91A895A1C00AFDCB9 /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785E81A895A1C00AFDCB9 /* Hotel.m */; };
+		487785EB1A8965EB00AFDCB9 /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 487785EA1A8965EB00AFDCB9 /* seed.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4847AA401A8969C7000F736D /* HotelListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelListViewController.h; sourceTree = "<group>"; };
+		4847AA411A8969C7000F736D /* HotelListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelListViewController.m; sourceTree = "<group>"; };
 		487785B21A89548A00AFDCB9 /* HotelsGalore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelsGalore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487785B61A89548A00AFDCB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		487785B71A89548B00AFDCB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 		487785E51A895A1C00AFDCB9 /* Guest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guest.m; sourceTree = "<group>"; };
 		487785E71A895A1C00AFDCB9 /* Hotel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hotel.h; sourceTree = "<group>"; };
 		487785E81A895A1C00AFDCB9 /* Hotel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hotel.m; sourceTree = "<group>"; };
+		487785EA1A8965EB00AFDCB9 /* seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = seed.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +104,10 @@
 				487785BA1A89548B00AFDCB9 /* AppDelegate.m */,
 				487785BF1A89548B00AFDCB9 /* ViewController.h */,
 				487785C01A89548B00AFDCB9 /* ViewController.m */,
+				487785EA1A8965EB00AFDCB9 /* seed.json */,
 				487785C21A89548B00AFDCB9 /* Main.storyboard */,
+				4847AA401A8969C7000F736D /* HotelListViewController.h */,
+				4847AA411A8969C7000F736D /* HotelListViewController.m */,
 				487785C51A89548B00AFDCB9 /* Images.xcassets */,
 				487785C71A89548B00AFDCB9 /* LaunchScreen.xib */,
 				487785BC1A89548B00AFDCB9 /* HotelsGalore.xcdatamodeld */,
@@ -224,6 +232,7 @@
 			files = (
 				487785C41A89548B00AFDCB9 /* Main.storyboard in Resources */,
 				487785C91A89548B00AFDCB9 /* LaunchScreen.xib in Resources */,
+				487785EB1A8965EB00AFDCB9 /* seed.json in Resources */,
 				487785C61A89548B00AFDCB9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +259,7 @@
 				487785C11A89548B00AFDCB9 /* ViewController.m in Sources */,
 				487785E91A895A1C00AFDCB9 /* Hotel.m in Sources */,
 				487785B81A89548B00AFDCB9 /* main.m in Sources */,
+				4847AA421A8969C7000F736D /* HotelListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +452,7 @@
 				487785DA1A89548B00AFDCB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		487785DB1A89548B00AFDCB9 /* Build configuration list for PBXNativeTarget "HotelsGaloreTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +461,7 @@
 				487785DD1A89548B00AFDCB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
