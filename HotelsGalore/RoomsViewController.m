@@ -9,6 +9,7 @@
 #import "RoomsViewController.h"
 
 @interface RoomsViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
