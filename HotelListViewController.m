@@ -31,6 +31,7 @@
     NSArray *results = [context executeFetchRequest:fetchRequest error:&fetchError];
     if (!fetchError) {
         self.hotels = results;
+        NSLog(@"%@", self.hotels);
         [self.tableView reloadData];
     }
     

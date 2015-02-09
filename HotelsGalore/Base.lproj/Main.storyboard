@@ -32,6 +32,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="oCN-q3-fJo" id="gfJ-qy-Mw9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcp-Sx-Rai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
