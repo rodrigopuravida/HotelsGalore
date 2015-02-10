@@ -9,10 +9,12 @@
 #import "HotelListViewController.h"
 #import "AppDelegate.h"
 #import "Hotel.h"
+#import "RoomsViewController.h"
 
 @interface HotelListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSArray *hotels;
+@property (strong,nonatomic) Hotel *hotel;
 
 @end
 
@@ -50,13 +52,22 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HOTEL_CELL" forIndexPath:indexPath];
-    Hotel *hotel = self.hotels[indexPath.row];
-    cell.textLabel.text = hotel.name;
+    self.hotel = self.hotels[indexPath.row];
+    cell.textLabel.text = self.hotel.name;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Selected a cell");
+    [self performSegueWithIdentifier:@"SHOW_ROOMS" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"SHOW_ROOMS"]) {
+        RoomsViewController *showRoomsVC = (RoomsViewController *)segue.destinationViewController;
+        showRoomsVC.hotel = self.hotel;
+        //NSLog(self.hotel.description);        
+    }
 }
 
 

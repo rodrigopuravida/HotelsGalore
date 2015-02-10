@@ -7,9 +7,11 @@
 //
 
 #import "RoomsViewController.h"
+#import "Hotel.h"
 
 @interface RoomsViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end
 
