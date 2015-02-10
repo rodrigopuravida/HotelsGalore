@@ -9,6 +9,10 @@
 #import "AvailabilityViewController.h"
 
 @interface AvailabilityViewController ()
+@property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
+@property (weak, nonatomic) IBOutlet UIDatePicker *endDatePicker;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *hotelSegmentControl;
+@property (strong,nonatomic) NSManagedObjectContext *context;
 
 @end
 
@@ -22,6 +26,8 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)checkAvailabilityPressed:(id)sender {
 }
 
 /*
