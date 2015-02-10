@@ -9,6 +9,7 @@
 #import "RoomsViewController.h"
 #import "Hotel.h"
 #import "Room.h"
+#import "ReservationsViewController.h"
 
 @interface RoomsViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -54,6 +55,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"SHOW_RESERVATION"]) {
+        ReservationsViewController *destinationVC = segue.destinationViewController;
+        NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+        Room *room = self.rooms[indexPath.row];
+        destinationVC.selectedRoom = room;
+    }
 }
 
 /*
