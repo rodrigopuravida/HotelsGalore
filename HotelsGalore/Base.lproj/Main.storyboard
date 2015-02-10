@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a14-YI-lIf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Rooms View Controller-->
@@ -76,19 +77,43 @@
                                     <!--2015-02-10 21:19:08 +0000-->
                                 </date>
                             </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9b-Kv-Jw7">
+                                <rect key="frame" x="41" y="81" width="128" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="36U-2w-MqM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ii6-gZ-gJL">
+                                <rect key="frame" x="207" y="81" width="136" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MD8-2s-sja"/>
+                                    <constraint firstAttribute="width" constant="136" id="blf-j7-krM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ii6-gZ-gJL" firstAttribute="leading" secondItem="B9b-Kv-Jw7" secondAttribute="trailing" constant="38" id="2ZS-SS-9Dw"/>
+                            <constraint firstItem="Ii6-gZ-gJL" firstAttribute="leading" secondItem="GnJ-MM-IfY" secondAttribute="leading" constant="207" id="6Aq-h8-jMh"/>
                             <constraint firstAttribute="centerX" secondItem="QVq-w0-gQ7" secondAttribute="centerX" id="CQF-l1-Us8"/>
+                            <constraint firstItem="B9b-Kv-Jw7" firstAttribute="top" secondItem="oF4-DD-Ubj" secondAttribute="bottom" constant="17" id="HbZ-Oz-5x1"/>
                             <constraint firstItem="Vlv-Mo-uFs" firstAttribute="top" secondItem="EkR-S3-Upa" secondAttribute="bottom" constant="8" id="Nti-kP-e5b"/>
+                            <constraint firstItem="B9b-Kv-Jw7" firstAttribute="leading" secondItem="GnJ-MM-IfY" secondAttribute="leadingMargin" constant="25" id="Qam-Q9-Rut"/>
                             <constraint firstAttribute="centerX" secondItem="EkR-S3-Upa" secondAttribute="centerX" id="StP-KW-u4j"/>
                             <constraint firstItem="EkR-S3-Upa" firstAttribute="top" secondItem="oqr-m9-Q9A" secondAttribute="bottom" constant="8" id="Yid-Z4-hsQ"/>
                             <constraint firstAttribute="centerX" secondItem="oqr-m9-Q9A" secondAttribute="centerX" id="oOd-GD-6Sv"/>
                             <constraint firstItem="oqr-m9-Q9A" firstAttribute="top" secondItem="QVq-w0-gQ7" secondAttribute="bottom" constant="8" id="tvo-UM-diW"/>
+                            <constraint firstItem="Ii6-gZ-gJL" firstAttribute="top" secondItem="oF4-DD-Ubj" secondAttribute="bottom" constant="17" id="v2t-7l-RZ9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="endDatePicker" destination="EkR-S3-Upa" id="4ZL-Gw-2n8"/>
+                        <outlet property="firstNameGuest" destination="B9b-Kv-Jw7" id="iRx-75-iFA"/>
+                        <outlet property="lastNameGuest" destination="Ii6-gZ-gJL" id="7Ak-3y-yxS"/>
                         <outlet property="startDatePicker" destination="oqr-m9-Q9A" id="aW5-Mf-Aod"/>
                     </connections>
                 </viewController>

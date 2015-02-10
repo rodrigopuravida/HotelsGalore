@@ -7,10 +7,14 @@
 //
 
 #import "ReservationsViewController.h"
+#import "Reservation.h"
+#import "Guest.h"
 
 @interface ReservationsViewController ()
 @property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
 @property (weak, nonatomic) IBOutlet UIDatePicker *endDatePicker;
+@property (weak, nonatomic) IBOutlet UITextField *firstNameGuest;
+@property (weak, nonatomic) IBOutlet UITextField *lastNameGuest;
 
 @end
 
@@ -28,6 +32,28 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)reserveNowPressed:(id)sender {
+    
+    Reservation *reservation = [NSEntityDescription insertNewObjectForEntityForName:@"Reservation" inManagedObjectContext:self.selectedRoom.managedObjectContext];
+    
+    reservation.startDate = self.startDatePicker.date;
+    reservation.endDate = self.endDatePicker.date;
+    reservation.room = self.selectedRoom;
+    Guest *guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:self.selectedRoom.managedObjectContext];
+//    guest.firstName = @"Bruce";
+//    guest.lastName = @"Waynwe";
+    guest.firstName = self.firstNameGuest.text;
+    guest.lastName = self.lastNameGuest.text;
+    reservation.guest = guest;
+    
+    NSLog(@"%lu",(unsigned long)self.selectedRoom.reservations.count);
+    
+    NSError *saveError;
+    [self.selectedRoom.managedObjectContext save:&saveError];
+    
+    if (saveError) {
+        NSLog(@" %@",saveError.localizedDescription);
+    }
+
 }
 
 /*
