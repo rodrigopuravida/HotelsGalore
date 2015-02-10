@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 #import "Hotel.h"
 
-@interface HotelListViewController () <UITableViewDataSource>
+@interface HotelListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSArray *hotels;
 
@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     
@@ -31,7 +32,7 @@
     NSArray *results = [context executeFetchRequest:fetchRequest error:&fetchError];
     if (!fetchError) {
         self.hotels = results;
-        NSLog(@"%@", self.hotels);
+        //NSLog(@"%@", self.hotels);
         [self.tableView reloadData];
     }
     
@@ -52,6 +53,10 @@
     Hotel *hotel = self.hotels[indexPath.row];
     cell.textLabel.text = hotel.name;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Selected a cell");
 }
 
 
