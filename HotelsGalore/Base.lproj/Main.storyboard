@@ -62,6 +62,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xRx-2q-aXY" id="mWU-cp-rFb">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4wf-sZ-91f" kind="show" identifier="SHOW_ROOMS" id="pYa-6H-EVH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -71,7 +74,6 @@
                     <navigationItem key="navigationItem" id="bzS-Hg-9J0"/>
                     <connections>
                         <outlet property="tableView" destination="oCN-q3-fJo" id="gfJ-qy-Mw9"/>
-                        <segue destination="4wf-sZ-91f" kind="show" identifier="SHOW_ROOMS" id="2Cs-wV-zqR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcp-Sx-Rai" userLabel="First Responder" sceneMemberID="firstResponder"/>

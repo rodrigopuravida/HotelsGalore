@@ -11,7 +11,7 @@
 #import "Hotel.h"
 #import "RoomsViewController.h"
 
-@interface HotelListViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface HotelListViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSArray *hotels;
 @property (strong,nonatomic) Hotel *hotel;
@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.dataSource = self;
-    self.tableView.delegate = self;
+    //self.tableView.delegate = self;
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     NSManagedObjectContext *context = appDelegate.managedObjectContext;
     
@@ -57,16 +57,17 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Selected a cell");
-    [self performSegueWithIdentifier:@"SHOW_ROOMS" sender:self];
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    NSLog(@"Selected a cell");
+//    [self performSegueWithIdentifier:@"SHOW_ROOMS" sender:self];
+//}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"SHOW_ROOMS"]) {
         RoomsViewController *showRoomsVC = (RoomsViewController *)segue.destinationViewController;
-        showRoomsVC.hotel = self.hotel;
-        //NSLog(self.hotel.description);        
+        NSIndexPath *indexPath = self.tableView.indexPathsForSelectedRows.firstObject;
+        showRoomsVC.hotel = self.hotels[indexPath.row];
+        
     }
 }
 
