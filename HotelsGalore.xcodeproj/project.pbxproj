@@ -24,6 +24,7 @@
 		487785E91A895A1C00AFDCB9 /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = 487785E81A895A1C00AFDCB9 /* Hotel.m */; };
 		487785EB1A8965EB00AFDCB9 /* seed.json in Resources */ = {isa = PBXBuildFile; fileRef = 487785EA1A8965EB00AFDCB9 /* seed.json */; };
 		48E1B3351A8AACAD00EC2715 /* ReservationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E1B3341A8AACAD00EC2715 /* ReservationsViewController.m */; };
+		48E1B3381A8ABD6400EC2715 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E1B3371A8ABD6400EC2715 /* AvailabilityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		487785EA1A8965EB00AFDCB9 /* seed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = seed.json; sourceTree = "<group>"; };
 		48E1B3331A8AACAD00EC2715 /* ReservationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservationsViewController.h; sourceTree = "<group>"; };
 		48E1B3341A8AACAD00EC2715 /* ReservationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservationsViewController.m; sourceTree = "<group>"; };
+		48E1B3361A8ABD6400EC2715 /* AvailabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailabilityViewController.h; sourceTree = "<group>"; };
+		48E1B3371A8ABD6400EC2715 /* AvailabilityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailabilityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				487785C01A89548B00AFDCB9 /* ViewController.m */,
 				487785EA1A8965EB00AFDCB9 /* seed.json */,
 				487785C21A89548B00AFDCB9 /* Main.storyboard */,
+				48E1B3361A8ABD6400EC2715 /* AvailabilityViewController.h */,
+				48E1B3371A8ABD6400EC2715 /* AvailabilityViewController.m */,
 				487785C51A89548B00AFDCB9 /* Images.xcassets */,
 				487785C71A89548B00AFDCB9 /* LaunchScreen.xib */,
 				487785BC1A89548B00AFDCB9 /* HotelsGalore.xcdatamodeld */,
@@ -266,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				487785E31A895A1C00AFDCB9 /* Reservation.m in Sources */,
+				48E1B3381A8ABD6400EC2715 /* AvailabilityViewController.m in Sources */,
 				48E1B3351A8AACAD00EC2715 /* ReservationsViewController.m in Sources */,
 				487785E01A895A1C00AFDCB9 /* Room.m in Sources */,
 				487785E61A895A1C00AFDCB9 /* Guest.m in Sources */,
