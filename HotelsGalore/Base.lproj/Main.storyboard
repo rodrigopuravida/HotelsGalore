@@ -38,7 +38,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBd-CW-sqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2158" y="-135"/>
+            <point key="canvasLocation" x="2140" y="-227"/>
+        </scene>
+        <!--Reservations View Controller-->
+        <scene sceneID="1gQ-BP-XY5">
+            <objects>
+                <viewController id="RaZ-mV-gtL" customClass="ReservationsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oF4-DD-Ubj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vlv-Mo-uFs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GnJ-MM-IfY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EkR-S3-Upa">
+                                <rect key="frame" x="157" y="401" width="317" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="445295955.94243097">
+                                    <!--2015-02-10 21:19:15 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVq-w0-gQ7">
+                                <rect key="frame" x="235" y="117" width="130" height="30"/>
+                                <state key="normal" title="Reserve Now">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oqr-m9-Q9A">
+                                <rect key="frame" x="154" y="195" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="445295948.287467">
+                                    <!--2015-02-10 21:19:08 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="QVq-w0-gQ7" secondAttribute="centerX" id="CQF-l1-Us8"/>
+                            <constraint firstItem="Vlv-Mo-uFs" firstAttribute="top" secondItem="EkR-S3-Upa" secondAttribute="bottom" constant="8" id="Nti-kP-e5b"/>
+                            <constraint firstAttribute="centerX" secondItem="EkR-S3-Upa" secondAttribute="centerX" id="StP-KW-u4j"/>
+                            <constraint firstItem="EkR-S3-Upa" firstAttribute="top" secondItem="oqr-m9-Q9A" secondAttribute="bottom" constant="8" id="Yid-Z4-hsQ"/>
+                            <constraint firstAttribute="centerX" secondItem="oqr-m9-Q9A" secondAttribute="centerX" id="oOd-GD-6Sv"/>
+                            <constraint firstItem="oqr-m9-Q9A" firstAttribute="top" secondItem="QVq-w0-gQ7" secondAttribute="bottom" constant="8" id="tvo-UM-diW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bx1-Yi-pT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2784" y="-249"/>
         </scene>
         <!--Hotel List View Controller-->
         <scene sceneID="VYy-vR-i1z">
