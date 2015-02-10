@@ -33,7 +33,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="rim-8z-Y6E" id="efd-CS-051"/>
+                        <outlet property="tableView" destination="rim-8z-Y6E" id="zyh-RY-HRv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBd-CW-sqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -96,7 +96,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEj-2G-Orv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="694" y="80"/>
+            <point key="canvasLocation" x="704" y="-109"/>
         </scene>
     </scenes>
 </document>

@@ -12,6 +12,7 @@
 
 @interface RoomsViewController () <UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @property (strong, nonatomic) NSArray *rooms;
 
 @end
@@ -20,8 +21,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.rooms = self.hotel.rooms.allObjects;
+    self.tableView.dataSource = self;
+    self.rooms =(NSArray *) self.hotel.rooms.allObjects;
     //NSSet *roomsArray =  self.hotel.rooms;
     NSLog(@"%lu", (unsigned long)self.hotel.rooms.count);
 
@@ -30,12 +31,15 @@
     // Do any additional setup after loading the view.
 }
 
+
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (self.rooms){
         return self.rooms.count;
     } else {
         return 0;
     }
+
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -43,6 +47,7 @@
     Room *currentRoom = self.rooms[indexPath.row];
     NSString *roomNumber = [NSString stringWithFormat:@"%@", currentRoom.number];
     cell.textLabel.text = roomNumber;
+
     return cell;
 }
 
