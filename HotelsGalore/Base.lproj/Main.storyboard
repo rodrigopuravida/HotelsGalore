@@ -52,7 +52,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EkR-S3-Upa">
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EkR-S3-Upa">
                                 <rect key="frame" x="157" y="401" width="317" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="445295955.94243097">
                                     <!--2015-02-10 21:19:15 +0000-->
@@ -63,8 +63,11 @@
                                 <state key="normal" title="Reserve Now">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="reserveNowPressed:" destination="RaZ-mV-gtL" eventType="touchUpInside" id="N09-1X-3wZ"/>
+                                </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oqr-m9-Q9A">
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oqr-m9-Q9A">
                                 <rect key="frame" x="154" y="195" width="320" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="445295948.287467">
                                     <!--2015-02-10 21:19:08 +0000-->
@@ -81,6 +84,10 @@
                             <constraint firstItem="oqr-m9-Q9A" firstAttribute="top" secondItem="QVq-w0-gQ7" secondAttribute="bottom" constant="8" id="tvo-UM-diW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="endDatePicker" destination="EkR-S3-Upa" id="4ZL-Gw-2n8"/>
+                        <outlet property="startDatePicker" destination="oqr-m9-Q9A" id="aW5-Mf-Aod"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bx1-Yi-pT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

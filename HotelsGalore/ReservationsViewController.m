@@ -9,6 +9,8 @@
 #import "ReservationsViewController.h"
 
 @interface ReservationsViewController ()
+@property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
+@property (weak, nonatomic) IBOutlet UIDatePicker *endDatePicker;
 
 @end
 
@@ -22,6 +24,8 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)reserveNowPressed:(id)sender {
 }
 
 /*
