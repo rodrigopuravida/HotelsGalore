@@ -9,12 +9,14 @@
 #import "AvailabilityViewController.h"
 #import "AppDelegate.h"
 #import "Reservation.h"
+#import "HotelService.h"
 
 @interface AvailabilityViewController ()
 @property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
 @property (weak, nonatomic) IBOutlet UIDatePicker *endDatePicker;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *hotelSegmentControl;
-@property (strong,nonatomic) NSManagedObjectContext *context;
+//TODO: Need to investigate as why this is still referring to old context
+//@property (strong,nonatomic) NSManagedObjectContext *context;
 
 @end
 
@@ -47,23 +49,19 @@
     
     
     NSFetchRequest *reservationFetch = [NSFetchRequest fetchRequestWithEntityName:@"Reservation"];
-    //does this mean that the dates are returning exclusive results ???
-    //NSPredicate *reservationPredicate = [NSPredicate predicateWithFormat:@"room.hotel.name MATCHES %@ AND startDate <= %@ OR endDate >= %@", selectedHotel,self.startDatePicker.date, self.endDatePicker.date];
+  //This is my predicate but using John's for efficiency purpoees
     
-    //this is the order after first combo - left margin check, middle check, overlap check, right margin check
-    
-//    NSPredicate *reservationPredicate = [NSPredicate predicateWithFormat:@"room.hotel.name MATCHES %@ AND startDate <= %@ OR endDate >= %@  OR (room.hotel.name MATCHES %@ AND startDate >= %@ AND startDate <= %@)OR (room.hotel.name MATCHES %@ AND startDate <= %@ AND endDate >= %@) OR (room.hotel.name MATCHES %@ AND startDate >= %@ AND endDate <= %@) OR (room.hotel.name MATCHES %@ AND startDate <= %@ AND endDate >= %@)", selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel,self.startDatePicker.date, self.endDatePicker.date];
-    
-    NSPredicate *reservationPredicate = [NSPredicate predicateWithFormat:@"(room.hotel.name MATCHES %@ AND startDate >= %@ AND startDate <= %@)OR (room.hotel.name MATCHES %@ AND startDate <= %@ AND endDate >= %@) OR (room.hotel.name MATCHES %@ AND startDate >= %@ AND endDate <= %@) OR (room.hotel.name MATCHES %@ AND startDate <= %@ AND endDate >= %@)", selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel];
+//    NSPredicate *reservationPredicate = [NSPredicate predicateWithFormat:@"(room.hotel.name MATCHES %@ AND startDate >= %@ AND startDate <= %@)OR (room.hotel.name MATCHES %@ AND startDate <= %@ AND endDate >= %@) OR (room.hotel.name MATCHES %@ AND startDate >= %@ AND endDate <= %@) OR (room.hotel.name MATCHES %@ AND startDate <= %@ AND endDate >= %@)", selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel,self.startDatePicker.date, self.endDatePicker.date, selectedHotel];
 
-    
+    NSPredicate *reservationPredicate = [NSPredicate predicateWithFormat:@"room.hotel.name MATCHES %@ AND startDate <= %@ AND endDate >= %@", selectedHotel,self.endDatePicker.date, self.startDatePicker.date];
+
     
     NSLog(@"Start date and End dates to check for availability are : %@ and %@", self.startDatePicker.date, self.endDatePicker.date);
 
     reservationFetch.predicate = reservationPredicate;
     NSError *fetchError;
     
-    NSArray *results = [self.context executeFetchRequest:reservationFetch error:&fetchError];
+    NSArray *results = [[[HotelService sharedService] coreDataStack].managedObjectContext executeFetchRequest:reservationFetch error:&fetchError];
     NSLog(@"Rooms reserved in that period are: %lu", (unsigned long)results.count);
     
     NSMutableArray *rooms = [NSMutableArray new];
@@ -78,7 +76,7 @@
     NSPredicate *roomsPredicate = [NSPredicate predicateWithFormat:@"hotel.name MATCHES %@ AND NOT (self IN %@)",selectedHotel, rooms];
     anotherFetchRequest.predicate = roomsPredicate;
     NSError *finalError;
-    NSArray *finalResults = [self.context executeFetchRequest:anotherFetchRequest error:&finalError];
+    NSArray *finalResults = [[[HotelService sharedService] coreDataStack].managedObjectContext executeFetchRequest:anotherFetchRequest error:&finalError];
     if (finalError) {
         NSLog(@"%@",finalError.localizedDescription);
     }
@@ -93,17 +91,6 @@
     //case 1 Start date overlaps existing reservation
     
 
-}
-
-+ (BOOL)isDateAvailableForResevation:(NSDate*)date isBetweenDate:(NSDate*)beginDate andDate:(NSDate*)endDate
-{
-    if ([date compare:beginDate] == NSOrderedAscending)
-        return NO;
-    
-    if ([date compare:endDate] == NSOrderedDescending)
-        return NO;
-    
-    return YES;
 }
 
 /*
