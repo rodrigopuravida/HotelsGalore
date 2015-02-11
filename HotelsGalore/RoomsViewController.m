@@ -48,6 +48,7 @@
     Room *currentRoom = self.rooms[indexPath.row];
     NSString *roomNumber = [NSString stringWithFormat:@"%@", currentRoom.number];
     cell.textLabel.text = roomNumber;
+    //NSLog(@"I'm going to book for this room : %@", roomNumber);
 
     return cell;
 }

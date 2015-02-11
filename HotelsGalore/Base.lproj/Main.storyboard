@@ -245,7 +245,7 @@
                                 </date>
                             </datePicker>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-FW-ATV">
-                                <rect key="frame" x="100.5" y="105" width="399" height="29"/>
+                                <rect key="frame" x="101" y="105" width="399" height="29"/>
                                 <segments>
                                     <segment title="Fancy Estates"/>
                                     <segment title="Solid Stay"/>

@@ -54,6 +54,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HOTEL_CELL" forIndexPath:indexPath];
     self.hotel = self.hotels[indexPath.row];
     cell.textLabel.text = self.hotel.name;
+    //NSLog(@"I'm going to search a room for Hotel: %@", self.hotel.name);
     return cell;
 }
 

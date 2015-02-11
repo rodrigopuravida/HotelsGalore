@@ -37,7 +37,10 @@
     
     reservation.startDate = self.startDatePicker.date;
     reservation.endDate = self.endDatePicker.date;
+    NSLog(@"Start date and End dates for reservation are : %@ and %@", self.startDatePicker.date, self.endDatePicker.date);
     reservation.room = self.selectedRoom;
+    NSLog(@"Hotel reserved is : %@", reservation.room.hotel);
+    NSLog(@"Room reserved is : %@", reservation.room.number);
     Guest *guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:self.selectedRoom.managedObjectContext];
 //    guest.firstName = @"Bruce";
 //    guest.lastName = @"Waynwe";
