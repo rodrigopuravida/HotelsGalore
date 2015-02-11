@@ -24,8 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    self.context = appDelegate.managedObjectContext;
+    //AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    //self.context = appDelegate.managedObjectContext;
     
 }
 
