@@ -27,6 +27,7 @@
 		48E1B3381A8ABD6400EC2715 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E1B3371A8ABD6400EC2715 /* AvailabilityViewController.m */; };
 		48F259E01A8BFA8D00172030 /* HotelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F259DF1A8BFA8D00172030 /* HotelService.m */; };
 		48F259E31A8BFB1200172030 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F259E21A8BFB1200172030 /* CoreDataStack.m */; };
+		48F259E61A8C08C500172030 /* ReservationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F259E51A8C08C500172030 /* ReservationListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		48F259DF1A8BFA8D00172030 /* HotelService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelService.m; sourceTree = "<group>"; };
 		48F259E11A8BFB1200172030 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		48F259E21A8BFB1200172030 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		48F259E41A8C08C500172030 /* ReservationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReservationListViewController.h; path = ../ReservationListViewController.h; sourceTree = "<group>"; };
+		48F259E51A8C08C500172030 /* ReservationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReservationListViewController.m; path = ../ReservationListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				4847AA431A896EFB000F736D /* HotelListViewController.h */,
 				4847AA441A896EFB000F736D /* HotelListViewController.m */,
 				4847AA461A89776A000F736D /* Tasks */,
+				48F259E41A8C08C500172030 /* ReservationListViewController.h */,
+				48F259E51A8C08C500172030 /* ReservationListViewController.m */,
 				48E1B3331A8AACAD00EC2715 /* ReservationsViewController.h */,
 				48E1B3341A8AACAD00EC2715 /* ReservationsViewController.m */,
 				4847AA481A897826000F736D /* RoomsViewController.h */,
@@ -290,6 +295,7 @@
 				487785BE1A89548B00AFDCB9 /* HotelsGalore.xcdatamodeld in Sources */,
 				487785C11A89548B00AFDCB9 /* ViewController.m in Sources */,
 				48F259E31A8BFB1200172030 /* CoreDataStack.m in Sources */,
+				48F259E61A8C08C500172030 /* ReservationListViewController.m in Sources */,
 				487785E91A895A1C00AFDCB9 /* Hotel.m in Sources */,
 				4847AA4A1A897826000F736D /* RoomsViewController.m in Sources */,
 				487785B81A89548B00AFDCB9 /* main.m in Sources */,
