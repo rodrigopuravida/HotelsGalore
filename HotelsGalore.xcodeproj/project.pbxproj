@@ -28,6 +28,7 @@
 		48F259E01A8BFA8D00172030 /* HotelService.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F259DF1A8BFA8D00172030 /* HotelService.m */; };
 		48F259E31A8BFB1200172030 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F259E21A8BFB1200172030 /* CoreDataStack.m */; };
 		48F259E61A8C08C500172030 /* ReservationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F259E51A8C08C500172030 /* ReservationListViewController.m */; };
+		48F259E81A8C1D3300172030 /* HotelServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F259E71A8C1D3300172030 /* HotelServiceTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		48F259E21A8BFB1200172030 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		48F259E41A8C08C500172030 /* ReservationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReservationListViewController.h; path = ../ReservationListViewController.h; sourceTree = "<group>"; };
 		48F259E51A8C08C500172030 /* ReservationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReservationListViewController.m; path = ../ReservationListViewController.m; sourceTree = "<group>"; };
+		48F259E71A8C1D3300172030 /* HotelServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelServiceTests.m; path = ../HotelsGalore/HotelServiceTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		487785D11A89548B00AFDCB9 /* HotelsGaloreTests */ = {
 			isa = PBXGroup;
 			children = (
+				48F259E71A8C1D3300172030 /* HotelServiceTests.m */,
 				487785D41A89548B00AFDCB9 /* HotelsGaloreTests.m */,
 				487785D21A89548B00AFDCB9 /* Supporting Files */,
 			);
@@ -307,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F259E81A8C1D3300172030 /* HotelServiceTests.m in Sources */,
 				487785D51A89548B00AFDCB9 /* HotelsGaloreTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
