@@ -9,6 +9,7 @@
 #import "ReservationsViewController.h"
 #import "Reservation.h"
 #import "Guest.h"
+#import "HotelService.h"
 
 @interface ReservationsViewController ()
 @property (weak, nonatomic) IBOutlet UIDatePicker *startDatePicker;
@@ -33,30 +34,13 @@
 }
 - (IBAction)reserveNowPressed:(id)sender {
     
-    Reservation *reservation = [NSEntityDescription insertNewObjectForEntityForName:@"Reservation" inManagedObjectContext:self.selectedRoom.managedObjectContext];
-    
-    reservation.startDate = self.startDatePicker.date;
-    reservation.endDate = self.endDatePicker.date;
-    NSLog(@"Start date and End dates for reservation are : %@ and %@", self.startDatePicker.date, self.endDatePicker.date);
-    reservation.room = self.selectedRoom;
-    NSLog(@"Hotel reserved is : %@", reservation.room.hotel);
-    NSLog(@"Room reserved is : %@", reservation.room.number);
-    Guest *guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:self.selectedRoom.managedObjectContext];
-//    guest.firstName = @"Bruce";
-//    guest.lastName = @"Waynwe";
+    Guest *guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:[[HotelService sharedService] coreDataStack].managedObjectContext];
     guest.firstName = self.firstNameGuest.text;
     guest.lastName = self.lastNameGuest.text;
-    reservation.guest = guest;
     
-    NSLog(@"%lu",(unsigned long)self.selectedRoom.reservations.count);
+    [[HotelService sharedService] bookReservationForGuest:guest ForRoom:self.selectedRoom startDate:self.startDatePicker.date endDate:self.endDatePicker.date];
+    [self dismissViewControllerAnimated:true completion:nil];
     
-    NSError *saveError;
-    [self.selectedRoom.managedObjectContext save:&saveError];
-    
-    if (saveError) {
-        NSLog(@" %@",saveError.localizedDescription);
-    }
-
 }
 
 /*
