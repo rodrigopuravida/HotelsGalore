@@ -47,6 +47,12 @@
     NSLog(@"Hotel reserved is : %@", reservation.room.hotel);
     NSLog(@"Room reserved is : %@", reservation.room.number);
     
+    //validation for start date to be less than or equal to end date
+    if (reservation.endDate < reservation.startDate) {
+        return nil;
+    }
+    
+    
     NSError *saveError;
     [self.coreDataStack.managedObjectContext save:&saveError];
     if (!saveError) {

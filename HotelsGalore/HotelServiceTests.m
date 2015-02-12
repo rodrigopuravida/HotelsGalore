@@ -66,9 +66,33 @@
     XCTAssertNotNil(reservation,@"reservation should not be nil for valid dates");
 }
 
--(void)testBookReservationWithStartDateAfterEndDate {
+-(void)testBookReservationWithEndDateBeforeStartDate {
+    NSDate *startDate = [NSDate date];
     
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    components.day = -4;
+    NSDate *endDate = [calendar dateByAddingComponents:components toDate:startDate options:0];
+    
+    
+    Reservation *reservation = [self.hotelService bookReservationForGuest:self.guest ForRoom:self.room startDate:startDate endDate:endDate];
+    XCTAssertNil(reservation);
+
 }
+
+//-(void)testBookReservationWithStartDateAfterEndDate{
+//    NSDate *startDate = [NSDate date];
+//    
+//    NSCalendar *calendar = [NSCalendar currentCalendar];
+//    NSDateComponents *components = [[NSDateComponents alloc] init];
+//    components.day = -4;
+//    NSDate *endDate = [calendar dateByAddingComponents:components toDate:startDate options:0];
+//    
+//    
+//    Reservation *reservation = [self.hotelService bookReservationForGuest:self.guest ForRoom:self.room startDate:startDate endDate:endDate];
+//    XCTAssertNil(reservation);
+//    
+//}
 
 
 - (void)testExample {
