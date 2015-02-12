@@ -21,4 +21,8 @@
 
 -(Reservation *)bookReservationForGuest:(Guest *)guest ForRoom:(Room *)room startDate:(NSDate*)startDate endDate:(NSDate *)endDate;
 
+-(void)checkRoomAvailabilityForGuest:(NSString *)hotel startDate:(NSDate*)starttDate endDate:(NSDate *)endDate;
+
+
+
 @end

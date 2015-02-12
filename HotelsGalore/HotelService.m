@@ -62,4 +62,53 @@
     }
 }
 
+-(void)checkRoomAvailabilityForGuest:(NSString *)hotel startDate:(NSDate *)starttDate endDate:(NSDate *)endDate {
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Room"];
+    NSLog(@"Hotel selected for availability is %@", hotel);
+    
+    //fetch all rooms with hotel name that matches the selected hotel
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"hotel.name MATCHES %@",hotel];
+    
+    fetchRequest.predicate = predicate;
+    
+    NSFetchRequest *reservationFetch = [NSFetchRequest fetchRequestWithEntityName:@"Reservation"];
+    
+     NSPredicate *reservationPredicate = [NSPredicate predicateWithFormat:@"room.hotel.name MATCHES %@ AND startDate <= %@ AND endDate >= %@", hotel, endDate, starttDate];
+    
+    NSLog(@"Start date and End dates to check for availability are : %@ and %@", starttDate, endDate);
+    
+    reservationFetch.predicate = reservationPredicate;
+    NSError *fetchError;
+    
+    NSArray *results = [[[HotelService sharedService] coreDataStack].managedObjectContext executeFetchRequest:reservationFetch error:&fetchError];
+    NSLog(@"Rooms reserved in that period are: %lu", (unsigned long)results.count);
+    
+    NSMutableArray *rooms = [NSMutableArray new];
+    
+    for (Reservation *reservation in results) {
+        [rooms addObject:reservation.room];
+        NSLog(@"Rooms checked out for availability are: %@", reservation.room);
+    }
+    
+    NSFetchRequest *anotherFetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Room"];
+    NSPredicate *roomsPredicate = [NSPredicate predicateWithFormat:@"hotel.name MATCHES %@ AND NOT (self IN %@)", hotel, rooms];
+    anotherFetchRequest.predicate = roomsPredicate;
+    NSError *finalError;
+    NSArray *finalResults = [[[HotelService sharedService] coreDataStack].managedObjectContext executeFetchRequest:anotherFetchRequest error:&finalError];
+    if (finalError) {
+        NSLog(@"%@",finalError.localizedDescription);
+    }
+    
+    NSLog(@"results for number of available rooms : %lu",(unsigned long)finalResults.count);
+    //NSLog(@"ARRAY for number of available rooms : %@",finalResults);
+    
+    for (Room *availableRoom in finalResults) {
+        NSLog(@"These room is available for this hotel and dates selected: %@", availableRoom);
+    }
+
+
+    
+}
+
 @end
