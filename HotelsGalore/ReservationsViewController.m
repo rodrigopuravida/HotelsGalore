@@ -38,6 +38,8 @@
     guest.firstName = self.firstNameGuest.text;
     guest.lastName = self.lastNameGuest.text;
     
+    [self.startDatePicker setMinimumDate: [NSDate date]];
+    
     [[HotelService sharedService] bookReservationForGuest:guest ForRoom:self.selectedRoom startDate:self.startDatePicker.date endDate:self.endDatePicker.date];
     [self dismissViewControllerAnimated:true completion:nil];
     

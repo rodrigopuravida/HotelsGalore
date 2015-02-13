@@ -43,14 +43,33 @@
     reservation.room = room;
     reservation.guest = guest;
     
+    NSDate *date = [NSDate date];
+    
     NSLog(@"Start date and End dates for reservation are : %@ and %@", reservation.startDate, reservation.endDate);
     NSLog(@"Hotel reserved is : %@", reservation.room.hotel);
     NSLog(@"Room reserved is : %@", reservation.room.number);
     
     //validation for start date to be less than or equal to end date
-    if (reservation.endDate < reservation.startDate) {
+    
+    if( [reservation.startDate timeIntervalSinceDate:reservation.endDate] > 0 ){
+        NSLog(@"The end date is smaller than start date for this reservation");
         return nil;
     }
+    
+    NSComparisonResult result = [date compare:reservation.startDate];
+    if (result == NSOrderedAscending) {
+        NSLog(@"now < startdate");
+    } else if (result == NSOrderedSame) {
+        NSLog(@"now == startdate");
+    } else if (result == NSOrderedDescending) {
+        NSLog(@"now > startdate");
+    }
+    
+//    if ([date timeIntervalSinceDate:reservation.startDate] > 0 ) {
+//        NSLog(@"This reservation is in the past");
+//        return nil;
+//    }
+//    
     
     
     NSError *saveError;
