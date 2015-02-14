@@ -29,6 +29,8 @@
 		48F259E31A8BFB1200172030 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F259E21A8BFB1200172030 /* CoreDataStack.m */; };
 		48F259E61A8C08C500172030 /* ReservationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F259E51A8C08C500172030 /* ReservationListViewController.m */; };
 		48F259E81A8C1D3300172030 /* HotelServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F259E71A8C1D3300172030 /* HotelServiceTests.m */; };
+		48F91C9E1A8EE1B500496E42 /* HashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F91C9D1A8EE1B500496E42 /* HashTable.m */; };
+		48F91CA11A8EE24F00496E42 /* Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = 48F91CA01A8EE24F00496E42 /* Bucket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,10 @@
 		48F259E41A8C08C500172030 /* ReservationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReservationListViewController.h; path = ../ReservationListViewController.h; sourceTree = "<group>"; };
 		48F259E51A8C08C500172030 /* ReservationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReservationListViewController.m; path = ../ReservationListViewController.m; sourceTree = "<group>"; };
 		48F259E71A8C1D3300172030 /* HotelServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotelServiceTests.m; path = ../HotelsGalore/HotelServiceTests.m; sourceTree = "<group>"; };
+		48F91C9C1A8EE1B500496E42 /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HashTable.h; path = HotelsGaloreTests/HashTable.h; sourceTree = SOURCE_ROOT; };
+		48F91C9D1A8EE1B500496E42 /* HashTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HashTable.m; path = HotelsGaloreTests/HashTable.m; sourceTree = SOURCE_ROOT; };
+		48F91C9F1A8EE24F00496E42 /* Bucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bucket.h; path = ../Bucket.h; sourceTree = "<group>"; };
+		48F91CA01A8EE24F00496E42 /* Bucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bucket.m; path = ../Bucket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +130,11 @@
 			children = (
 				487785B91A89548B00AFDCB9 /* AppDelegate.h */,
 				487785BA1A89548B00AFDCB9 /* AppDelegate.m */,
+				48F91C9F1A8EE24F00496E42 /* Bucket.h */,
+				48F91CA01A8EE24F00496E42 /* Bucket.m */,
 				487785BF1A89548B00AFDCB9 /* ViewController.h */,
+				48F91C9C1A8EE1B500496E42 /* HashTable.h */,
+				48F91C9D1A8EE1B500496E42 /* HashTable.m */,
 				4847AA431A896EFB000F736D /* HotelListViewController.h */,
 				4847AA441A896EFB000F736D /* HotelListViewController.m */,
 				4847AA461A89776A000F736D /* Tasks */,
@@ -290,6 +300,7 @@
 			files = (
 				487785E31A895A1C00AFDCB9 /* Reservation.m in Sources */,
 				48E1B3381A8ABD6400EC2715 /* AvailabilityViewController.m in Sources */,
+				48F91C9E1A8EE1B500496E42 /* HashTable.m in Sources */,
 				48F259E01A8BFA8D00172030 /* HotelService.m in Sources */,
 				48E1B3351A8AACAD00EC2715 /* ReservationsViewController.m in Sources */,
 				487785E01A895A1C00AFDCB9 /* Room.m in Sources */,
@@ -302,6 +313,7 @@
 				487785E91A895A1C00AFDCB9 /* Hotel.m in Sources */,
 				4847AA4A1A897826000F736D /* RoomsViewController.m in Sources */,
 				487785B81A89548B00AFDCB9 /* main.m in Sources */,
+				48F91CA11A8EE24F00496E42 /* Bucket.m in Sources */,
 				4847AA451A896EFB000F736D /* HotelListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
