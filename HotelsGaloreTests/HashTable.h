@@ -14,8 +14,8 @@
 
 -(void)removeObjectForKey:(NSString*)key;
 
--(void)objectForKey:(NSString*)key;
+-(id)objectForKey:(NSString*)key;
 
--(instancetype)initWithSize:(NSInteger*)size;
+-(instancetype)initWithSize:(NSInteger)size;
 
 @end

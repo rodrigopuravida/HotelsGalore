@@ -42,8 +42,7 @@
         //NSLog(@"%@", self.hotels);
         [self.tableView reloadData];
     }
-    
-    
+
     // Do any additional setup after loading the view.
 }
 
@@ -63,10 +62,6 @@
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"Selected a cell");
-//    [self performSegueWithIdentifier:@"SHOW_ROOMS" sender:self];
-//}
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"SHOW_ROOMS"]) {

@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "Hotel.h"
 #import "Room.h"
+#import "Bucket.h"
+#import "HashTable.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +25,16 @@
     
     // Override point for customization after application launch.
     //[self seedDataBaseIfNeeded];
+    
+    
+    //MARK: TESTING HASH TABLE ===========================================================
+    NSLog(@"TESTING HASHTABLE");
+    
+    //initializing hash table with six elements
+    HashTable *myHash = [[HashTable alloc] initWithSize:6];
+    
+    
+    
     return YES;
 }
 
