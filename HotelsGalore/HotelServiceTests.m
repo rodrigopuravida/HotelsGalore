@@ -89,22 +89,6 @@
 
 }
 
--(void)testBookReservationWithStartDateAInThePast{
-    
-    self.startDate = [NSDate dateWithTimeIntervalSinceNow:-2*7*24*60*60];
-    
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [[NSDateComponents alloc] init];
-    components.day = 2;
-   
-    self.endDate = [calendar dateByAddingComponents:components toDate:self.startDate options:0];
-
-    Reservation *reservation = [self.hotelService bookReservationForGuest:self.guest ForRoom:self.room startDate:self.startDate endDate:self.endDate];
-    XCTAssertNil(reservation,@"reservation should be nil for a start date in the past");
-    
-}
-
-
 - (void)testExample {
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");

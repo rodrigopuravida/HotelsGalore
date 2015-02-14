@@ -65,11 +65,11 @@
         NSLog(@"now > startdate");
     }
     
-//    if ([date timeIntervalSinceDate:reservation.startDate] > 0 ) {
+//    if (result == NSOrderedDescending) {
 //        NSLog(@"This reservation is in the past");
 //        return nil;
 //    }
-//    
+    
     
     
     NSError *saveError;
