@@ -332,7 +332,11 @@
                                 </date>
                             </datePicker>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-FW-ATV">
-                                <rect key="frame" x="101" y="105" width="399" height="29"/>
+                                <rect key="frame" x="140.5" y="105" width="320" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="5qE-Vg-Cas"/>
+                                    <constraint firstAttribute="height" constant="28" id="6MU-7j-Iuw"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Fancy Estates"/>
                                     <segment title="Solid Stay"/>
