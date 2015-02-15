@@ -30,11 +30,18 @@
     //MARK: TESTING HASH TABLE ===========================================================
     NSLog(@"TESTING HASHTABLE");
     
-    //initializing hash table with six elements
-    HashTable *myHash = [[HashTable alloc] initWithSize:6];
+    //initializing hash table
+    HashTable *myHashTable = [[HashTable alloc] initWithSize:10];
     
-    
-    
+    for (int i = 0; i <30;i++)
+    {
+        NSString *key = [NSString stringWithFormat:@"key %d",i];
+        [myHashTable setObject:[NSString stringWithFormat:@"Bat %d",i] forKey:key];
+        NSLog(@"Key is: %@", key);
+    }
+    //remove one node from middle key '15'
+    NSLog(@"Removing Key 15");
+    [myHashTable removeObjectForKey:@"15"];
     return YES;
 }
 

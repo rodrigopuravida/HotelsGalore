@@ -126,8 +126,6 @@
         NSLog(@"These room is available for this hotel and dates selected: %@", availableRoom);
     }
 
-
-    
 }
 
 @end

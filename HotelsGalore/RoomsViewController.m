@@ -27,9 +27,7 @@
     self.rooms =(NSArray *) self.hotel.rooms.allObjects;
     //NSSet *roomsArray =  self.hotel.rooms;
     NSLog(@"%lu", (unsigned long)self.hotel.rooms.count);
-
-    
-    
+ 
     // Do any additional setup after loading the view.
 }
 
