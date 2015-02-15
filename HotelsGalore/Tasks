@@ -20,3 +20,9 @@ Implement a fetchedresultscontroller in your reservation list view controller.
 Thursday
 
 Create an implementation of Hash Table.
+
+
+Extras:
+Implemented all functionality asked.
+Hash Table implemented under AppDelegate.m
+Added text fields to enter First and Last Name

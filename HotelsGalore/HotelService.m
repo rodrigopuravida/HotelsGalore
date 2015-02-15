@@ -5,8 +5,9 @@
 //  Created by Rodrigo Carballo on 2/11/15.
 //  Copyright (c) 2015 Rodrigo Carballo. All rights reserved.
 //
-
+@import UIKit;
 #import "HotelService.h"
+
 
 @implementation HotelService
 
@@ -125,7 +126,21 @@
     for (Room *availableRoom in finalResults) {
         NSLog(@"These room is available for this hotel and dates selected: %@", availableRoom);
     }
+    
+    [self myAlert:[NSString stringWithFormat:@"%lu", (unsigned long)finalResults.count]];
+}
 
+- (void) myAlert: (NSString*)errorMessage
+{
+    UIAlertView *myAlert = [[UIAlertView alloc]
+                            initWithTitle:errorMessage
+                            message:@"Rooms Available"
+                            delegate:self
+                            cancelButtonTitle:nil
+                            otherButtonTitles:@"Ok", nil];
+    myAlert.cancelButtonIndex = -1;
+    [myAlert setTag:1000];
+    [myAlert show];
 }
 
 @end

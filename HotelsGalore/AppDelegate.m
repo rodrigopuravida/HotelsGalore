@@ -24,7 +24,8 @@
     NSLog(@"%@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory  inDomains:NSUserDomainMask] lastObject]);
     
     // Override point for customization after application launch.
-    //[self seedDataBaseIfNeeded];
+    
+    
     
     
     //MARK: TESTING HASH TABLE ===========================================================
